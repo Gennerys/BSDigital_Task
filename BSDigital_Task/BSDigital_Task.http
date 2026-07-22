@@ -1,0 +1,18 @@
+@BSDigital_Task_ExecutionAPI
+POST {{BSDigital_Task_HostAddress}}/api/execution/best
+Content-Type: application/json
+
+{
+  "orderType": "Buy",
+  "amountBtc": 1.5
+}
+
+###
+
+POST {{BSDigital_Task_HostAddress}}/api/execution/best
+Content-Type: application/json
+
+{
+  "orderType": "Sell",
+  "amountBtc": 0.5
+}
