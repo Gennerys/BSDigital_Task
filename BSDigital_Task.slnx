@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BSDigital_Task.Console/BSDigital_Task.Console.csproj" />
+  <Project Path="BSDigital_Task.Core/BSDigital_Task.Core.csproj" />
+  <Project Path="BSDigital_Task.Tests/BSDigital_Task.Tests.csproj" />
+  <Project Path="BSDigital_Task/BSDigital_Task.csproj" />
+</Solution>
