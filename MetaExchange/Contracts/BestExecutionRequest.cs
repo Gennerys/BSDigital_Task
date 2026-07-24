@@ -11,6 +11,6 @@ public sealed class BestExecutionRequest
     [Required]
     public OrderType OrderType { get; init; }
 
-    [Range(typeof(decimal), "0.00000001", "1000000")]
+    [Range(0.00000001, 1_000_000)]
     public decimal AmountBtc { get; init; }
 }
