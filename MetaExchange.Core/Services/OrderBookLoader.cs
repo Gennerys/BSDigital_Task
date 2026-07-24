@@ -1,6 +1,5 @@
-using System.Globalization;
 using System.Text.Json;
-using System.Text.Json.Serialization;
+using MetaExchange.Dtos;
 using MetaExchange.Models;
 
 namespace MetaExchange.Services;
@@ -69,42 +68,4 @@ public sealed class OrderBookLoader : IOrderBookLoader
             .OrderBy(e => e.PriceEur)
             .ToList()
     };
-
-    private sealed class OrderBookDto
-    {
-        public List<LevelDto> Bids { get; set; } = [];
-        public List<LevelDto> Asks { get; set; } = [];
-    }
-
-    private sealed class LevelDto
-    {
-        public OrderDto Order { get; set; } = new();
-    }
-
-    private sealed class OrderDto
-    {
-        [JsonConverter(typeof(DecimalFlexibleConverter))]
-        public decimal Amount { get; set; }
-
-        [JsonConverter(typeof(DecimalFlexibleConverter))]
-        public decimal Price { get; set; }
-    }
-
-    private sealed class DecimalFlexibleConverter : JsonConverter<decimal>
-    {
-        public override decimal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            if (reader.TokenType == JsonTokenType.Number && reader.TryGetDecimal(out var value))
-                return value;
-
-            if (reader.TokenType == JsonTokenType.String &&
-                decimal.TryParse(reader.GetString(), NumberStyles.Float, CultureInfo.InvariantCulture, out value))
-                return value;
-
-            throw new JsonException($"Unexpected token for decimal: {reader.TokenType}");
-        }
-
-        public override void Write(Utf8JsonWriter writer, decimal value, JsonSerializerOptions options) =>
-            writer.WriteNumberValue(value);
-    }
 }
