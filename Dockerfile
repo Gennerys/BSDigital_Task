@@ -2,13 +2,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-COPY BSDigital_Task.Core/BSDigital_Task.Core.csproj BSDigital_Task.Core/
-COPY BSDigital_Task/BSDigital_Task.csproj BSDigital_Task/
-RUN dotnet restore BSDigital_Task/BSDigital_Task.csproj
+COPY MetaExchange.Core/MetaExchange.Core.csproj MetaExchange.Core/
+COPY MetaExchange/MetaExchange.csproj MetaExchange/
+RUN dotnet restore MetaExchange/MetaExchange.csproj
 
-COPY BSDigital_Task.Core/ BSDigital_Task.Core/
-COPY BSDigital_Task/ BSDigital_Task/
-RUN dotnet publish BSDigital_Task/BSDigital_Task.csproj -c Release -o /app/publish --no-restore
+COPY MetaExchange.Core/ MetaExchange.Core/
+COPY MetaExchange/ MetaExchange/
+RUN dotnet publish MetaExchange/MetaExchange.csproj -c Release -o /app/publish --no-restore
 
 # Run
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
@@ -20,4 +20,4 @@ ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Development
 
 EXPOSE 8080
-ENTRYPOINT ["dotnet", "BSDigital_Task.dll"]
+ENTRYPOINT ["dotnet", "MetaExchange.dll"]

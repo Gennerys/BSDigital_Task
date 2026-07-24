@@ -1,0 +1,18 @@
+@MetaExchange_ExecutionAPI
+POST {{MetaExchange_HostAddress}}/api/execution/best
+Content-Type: application/json
+
+{
+  "orderType": "Buy",
+  "amountBtc": 1.5
+}
+
+###
+
+POST {{MetaExchange_HostAddress}}/api/execution/best
+Content-Type: application/json
+
+{
+  "orderType": "Sell",
+  "amountBtc": 0.5
+}

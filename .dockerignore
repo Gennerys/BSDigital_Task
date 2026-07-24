@@ -25,5 +25,5 @@
 **/*.md
 **/CodingTask.txt
 
-BSDigital_Task.Tests
-BSDigital_Task.Console
+MetaExchange.Tests
+MetaExchange.Console

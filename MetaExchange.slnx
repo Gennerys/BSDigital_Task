@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MetaExchange.Console/MetaExchange.Console.csproj" />
+  <Project Path="MetaExchange.Core/MetaExchange.Core.csproj" />
+  <Project Path="MetaExchange.Tests/MetaExchange.Tests.csproj" />
+  <Project Path="MetaExchange/MetaExchange.csproj" />
+</Solution>
