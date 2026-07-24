@@ -3,6 +3,9 @@ using MetaExchange.Services;
 
 namespace MetaExchange.Tests;
 
+/// <summary>
+/// Unit tests for <see cref="MetaExchangeService"/>.
+/// </summary>
 public sealed class MetaExchangeServiceTests
 {
     private readonly MetaExchangeService _sut = new();

@@ -3,6 +3,9 @@ using MetaExchange.Converters;
 
 namespace MetaExchange.Dtos;
 
+/// <summary>
+/// Order amount and price from the source JSON.
+/// </summary>
 internal sealed class OrderDto
 {
     [JsonConverter(typeof(DecimalFlexibleConverter))]

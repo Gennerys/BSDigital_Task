@@ -2,8 +2,10 @@ using MetaExchange.Models;
 
 namespace MetaExchange.Services;
 
+/// <inheritdoc />
 public sealed class MetaExchangeService : IMetaExchangeService
 {
+    /// <inheritdoc />
     public ExecutionPlan GetBestExecution(
         IReadOnlyList<Exchange> exchanges,
         OrderType orderType,
@@ -95,5 +97,8 @@ public sealed class MetaExchangeService : IMetaExchangeService
     private static decimal Min(decimal a, decimal b, decimal c) =>
         Math.Min(a, Math.Min(b, c));
 
+    /// <summary>
+    /// An order-book level tagged with its exchange.
+    /// </summary>
     private sealed record BookLevel(string ExchangeId, decimal PriceEur, decimal AmountBtc);
 }

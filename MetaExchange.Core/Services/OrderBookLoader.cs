@@ -4,6 +4,7 @@ using MetaExchange.Models;
 
 namespace MetaExchange.Services;
 
+/// <inheritdoc />
 public sealed class OrderBookLoader : IOrderBookLoader
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
@@ -11,6 +12,7 @@ public sealed class OrderBookLoader : IOrderBookLoader
         PropertyNameCaseInsensitive = true
     };
 
+    /// <inheritdoc />
     public IReadOnlyList<Exchange> LoadExchanges(
         string filePath,
         int count,

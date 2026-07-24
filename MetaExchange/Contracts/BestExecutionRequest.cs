@@ -3,6 +3,9 @@ using MetaExchange.Models;
 
 namespace MetaExchange.Contracts;
 
+/// <summary>
+/// Request to compute a best-execution plan.
+/// </summary>
 public sealed class BestExecutionRequest
 {
     [Required]

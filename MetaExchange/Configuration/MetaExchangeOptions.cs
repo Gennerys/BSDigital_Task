@@ -1,5 +1,8 @@
 namespace MetaExchange.Configuration;
 
+/// <summary>
+/// Configuration for loading order books and default exchange balances.
+/// </summary>
 public sealed class MetaExchangeOptions
 {
     public const string SectionName = "MetaExchange";

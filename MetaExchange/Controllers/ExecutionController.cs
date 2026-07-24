@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MetaExchange.Controllers;
 
+/// <summary>
+/// Endpoints for best-execution planning.
+/// </summary>
 [ApiController]
 [Route("api/execution")]
 public sealed class ExecutionController : ControllerBase

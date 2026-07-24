@@ -1,5 +1,8 @@
 namespace MetaExchange.Models;
 
+/// <summary>
+/// A crypto exchange with balances and an order book.
+/// </summary>
 public sealed class Exchange
 {
     public required string Id { get; init; }

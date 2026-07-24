@@ -1,5 +1,8 @@
 namespace MetaExchange.Models;
 
+/// <summary>
+/// A planned order to execute against a specific exchange.
+/// </summary>
 public sealed class PlannedOrder
 {
     public required string ExchangeId { get; init; }

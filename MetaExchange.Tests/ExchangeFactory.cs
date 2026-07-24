@@ -2,6 +2,9 @@ using MetaExchange.Models;
 
 namespace MetaExchange.Tests;
 
+/// <summary>
+/// Test helper for building exchange fixtures.
+/// </summary>
 internal static class ExchangeFactory
 {
     public static Exchange Create(

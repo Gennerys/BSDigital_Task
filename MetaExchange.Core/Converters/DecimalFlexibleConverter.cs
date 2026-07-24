@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace MetaExchange.Converters;
 
+/// <summary>
+/// JSON converter that accepts decimals as numbers or strings.
+/// </summary>
 internal sealed class DecimalFlexibleConverter : JsonConverter<decimal>
 {
     public override decimal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

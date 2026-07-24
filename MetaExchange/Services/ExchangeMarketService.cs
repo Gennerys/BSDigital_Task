@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 
 namespace MetaExchange.Services;
 
+/// <inheritdoc />
 public sealed class ExchangeMarketService : IExchangeMarketService
 {
     private readonly IReadOnlyList<Exchange> _exchanges;
@@ -35,6 +36,7 @@ public sealed class ExchangeMarketService : IExchangeMarketService
         logger.LogInformation("Loaded {Count} exchange(s)", _exchanges.Count);
     }
 
+    /// <inheritdoc />
     public IReadOnlyList<Exchange> GetExchanges() =>
         _exchanges
             .Select(e => new Exchange

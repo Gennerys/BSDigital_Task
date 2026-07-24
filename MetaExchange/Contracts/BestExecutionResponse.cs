@@ -2,6 +2,9 @@ using MetaExchange.Models;
 
 namespace MetaExchange.Contracts;
 
+/// <summary>
+/// API response for a best-execution plan.
+/// </summary>
 public sealed class BestExecutionResponse
 {
     public required string OrderType { get; init; }
@@ -31,6 +34,9 @@ public sealed class BestExecutionResponse
     };
 }
 
+/// <summary>
+/// A single planned order in the API response.
+/// </summary>
 public sealed class PlannedOrderDto
 {
     public required string ExchangeId { get; init; }

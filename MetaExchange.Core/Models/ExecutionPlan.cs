@@ -1,5 +1,8 @@
 namespace MetaExchange.Models;
 
+/// <summary>
+/// Best-execution result with planned orders and fill totals.
+/// </summary>
 public sealed class ExecutionPlan
 {
     public required OrderType OrderType { get; init; }
